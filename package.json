@@ -1,0 +1,31 @@
+{
+  "name": "effected",
+  "version": "0.1.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
+  "description": "animation events use as Promises",
+  "main": "./index.js",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sasaplus1/effected.js.git"
+  },
+  "scripts": {
+    "build": "npm ru clean && npm ru compile && npm ru minify",
+    "clean": "npm ru rimraf -- ./build",
+    "compile": "npm ru webpack -- --output-filename ./build/effected.js",
+    "develop": "parallelshell 'npm ru compile -- -w' 'npm ru minify -- -w'",
+    "karma": "karma start --colors",
+    "minify": "npm ru webpack -- --optimize-minimize --output-filename ./build/effected.min.js",
+    "prepublish": "npm ru build",
+    "rimraf": "rimraf",
+    "test": "npm ru karma -- --single-run --browsers Firefox,Chrome,Safari",
+    "webpack": "webpack --colors --display-error-details --progress"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "parallelshell": "^2.0.0",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.14"
+  }
+}
