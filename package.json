@@ -1,0 +1,13 @@
+{
+  "name": "effected",
+  "version": "0.0.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
+  "description": "animation events use as Promises",
+  "main": "./index.js",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sasaplus1/effected.js.git"
+  }
+}
