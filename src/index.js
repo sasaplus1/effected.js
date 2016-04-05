@@ -138,6 +138,10 @@ function effected(element, eventType, callback) {
 function iterated(element, callback) {
   var handler;
 
+  if (!element || !element.nodeType || element.nodeType !== 1) {
+    throw new TypeError('element must be a HTMLElement');
+  }
+
   handler = function() {
     // remove handler
     controlEventListeners(
