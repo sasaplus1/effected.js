@@ -111,7 +111,7 @@ function effected(element, eventType, callback) {
     };
 
     // add handler
-    controlEventListeners(addEventListener, targetEvents, element, handler);
+    controlEventListeners(element, addEventListener, targetEvents, handler);
   } else {
     // use Promise
     return new effected.Promise(function(resolve, reject) {
@@ -124,7 +124,7 @@ function effected(element, eventType, callback) {
       };
 
       // add handler
-      controlEventListeners(addEventListener, targetEvents, element, handler);
+      controlEventListeners(element, addEventListener, targetEvents, handler);
     });
   }
 }
