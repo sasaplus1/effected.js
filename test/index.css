@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.js-animation-move {
+	-webkit-animation: move 0.1s linear 0s;
+	animation: move 0.1s linear 0s;
+}
+
+.js-animation-iterate-move {
+	-webkit-animation: move 0.1s linear 0s 2 alternate;
+	animation: move 0.1s linear 0s 2 alternate;
+}
+
+@-webkit-keyframes move {
+	from {
+	  -webkit-transform: translateX(0px);
+	  transform: translateX(0px);
+	}
+	to {
+	  -webkit-transform: translateX(1px);
+	  transform: translateX(1px);
+	}
+}
+
+@keyframes move {
+	from {
+	  -webkit-transform: translateX(0px);
+	  transform: translateX(0px);
+	}
+	to {
+	  -webkit-transform: translateX(1px);
+	  transform: translateX(1px);
+	}
+}

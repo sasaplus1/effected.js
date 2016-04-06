@@ -111,7 +111,7 @@ function effected(element, eventType, callback) {
     };
 
     // add handler
-    controlEventListeners(addEventListener, targetEvents, element, handler);
+    controlEventListeners(element, addEventListener, targetEvents, handler);
   } else {
     // use Promise
     return new effected.Promise(function(resolve, reject) {
@@ -124,7 +124,7 @@ function effected(element, eventType, callback) {
       };
 
       // add handler
-      controlEventListeners(addEventListener, targetEvents, element, handler);
+      controlEventListeners(element, addEventListener, targetEvents, handler);
     });
   }
 }
@@ -137,6 +137,10 @@ function effected(element, eventType, callback) {
  */
 function iterated(element, callback) {
   var handler;
+
+  if (!element || !element.nodeType || element.nodeType !== 1) {
+    throw new TypeError('element must be a HTMLElement');
+  }
 
   handler = function() {
     // remove handler
