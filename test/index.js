@@ -36,7 +36,7 @@
         div.classList.add(animation);
       });
 
-      it('resolve when animated', function(done) {
+      it('resolve when animated', (effected.Promise) && function(done) {
         effected(div).then(function(event) {
           assert(event.animationName === animationName);
           done();
