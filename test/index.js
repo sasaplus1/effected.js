@@ -45,6 +45,14 @@
         div.classList.add(animation);
       });
 
+      it('throw error if Promise is not implemented', (!effected.Promise) &&
+        function() {
+          assert.throws(function() {
+            effected(div);
+          });
+        }
+      );
+
       it('throw error if not passed an element', function() {
         assert.throws(function() {
           effected();
